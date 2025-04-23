@@ -1,29 +1,34 @@
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Providers } from "@/app/providers";
+import { Header } from "../components/layout/header/header";
+import { Footer } from "../components/layout/footer/footer";
 import "./globals.css";
-import Header from "@/components/Layout/Header";
-import Footer from "@/components/Layout/Footer";
-
-const inter = Inter({ subsets: ["latin"] });
+import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Tapiceria Confort",
-  description: "Tapiceria Online Automotriz",
+  title: {
+    template: "%s | TiendaNext",
+    default: "TiendaNext - Tu tienda online de confianza",
+  },
+  description: "Descubre productos de alta calidad con los mejores precios",
+  keywords: ["ecommerce", "tienda online", "productos", "compras"],
+  icons: {
+    icon: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="es">
-      <body className={inter.className}>
-        <div className="min-h-screen flex flex-col">
+      <body className="min-h-screen flex flex-col">
+        <Providers>
           <Header />
           <main className="flex-grow">{children}</main>
           <Footer />
-        </div>
+        </Providers>
       </body>
     </html>
   );
