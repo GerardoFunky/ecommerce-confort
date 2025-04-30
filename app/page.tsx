@@ -20,7 +20,7 @@ export default function HomePage() {
         <h2 className="text-2xl font-bold mb-8 text-center">
           Categorías destacadas
         </h2>
-        <CategoryShowcase />
+        <CategoryShowcase categories={[]} />
       </section>
 
       <section className="container mx-auto px-4">
@@ -30,13 +30,20 @@ export default function HomePage() {
         <FeaturedProducts />
       </section>
 
-      <PromotionBanner />
+      <PromotionBanner
+        title={""}
+        description={""}
+        buttonText={""}
+        buttonLink={""}
+        imageSrc={""}
+        imageAlt={""}
+      />
 
       <section className="container mx-auto px-4">
         <h2 className="text-2xl font-bold mb-8 text-center">
           Lo que dicen nuestros clientes
         </h2>
-        <Testimonials />
+        <Testimonials testimonials={[]} />
       </section>
     </div>
   );

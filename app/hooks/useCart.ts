@@ -11,7 +11,7 @@ export function useCart() {
     throw new Error("useCart debe ser usado dentro de un CartProvider");
   }
 
-  const { cart, setCart } = ;
+  const { cart, setCart } = cartContext;
 
   const [loading, setLoading] = useState<boolean>(false);
   const [error, setError] = useState<Error | null>(null);

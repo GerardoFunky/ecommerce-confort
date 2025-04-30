@@ -4,7 +4,6 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { Check, CreditCard, Truck } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import AddressForm from "./address-form";
 import PaymentMethods from "./payment-methods";
 import ShippingOptions from "./shipping-options";
 
@@ -126,11 +125,6 @@ const CheckoutForm = () => {
       <div>
         {currentStep === "shipping" && (
           <div>
-            <h2 className="text-lg font-medium mb-4">Información de envío</h2>
-            <AddressForm
-              initialData={shippingAddress}
-              onSubmit={handleAddressSubmit}
-            />
             <div className="mt-6">
               <h3 className="text-lg font-medium mb-4">Método de envío</h3>
               <ShippingOptions

@@ -5,9 +5,9 @@
 import { useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { useCart } from "@/hooks/useCart";
-import CheckoutForm from "@/components/checkout/checkout-form";
-import CheckoutSummary from "@/components/checkout/checkout-summary";
-import Breadcrumbs from "@/components/layout/breadcrumbs";
+import CheckoutForm from "./checkout-form";
+import CheckoutSummary from "./checkout-summary";
+import { Breadcrumbs } from "@/components/ui/breadcrumbs";
 
 const CheckoutPage = () => {
   const { cart, isEmpty } = useCart();

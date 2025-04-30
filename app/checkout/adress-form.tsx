@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import { Input } from "@/components/ui/input";
-import countriesList from "@/lib/constants/countries";
 
 // Define the address data structure
 interface AddressData {
